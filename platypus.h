@@ -1,8 +1,8 @@
 //
-//  platypus.h
+//  File Name:  platypus.h
 //  
 //
-//  Created by Filipp on 3/3/22.
+//
 //
 
 #ifndef PLATYPUS_H
