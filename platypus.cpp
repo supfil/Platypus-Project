@@ -1,8 +1,8 @@
 //
-//  platypus.cpp
-//  
+//  File Name:  platypus.cpp
+//  Authors:    William, Filipp
 //
-//  Created by Filipp on 3/3/22.
+//
 //
 
 #include <iostream>
@@ -25,4 +25,13 @@ Platypus::Platypus(string n, float w, short a, char g)
     weight = w;
     alive = true;
     mutant = false;
+}
+
+void PlatyPus::eat()
+{
+    
+}
+void Platypus::hatch()
+{
+    
 }

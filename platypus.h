@@ -1,6 +1,6 @@
 //
 //  File Name:  platypus.h
-//  
+//  Authors:    William, Filipp
 //
 //
 //
