@@ -29,8 +29,18 @@ Platypus::Platypus(string n, float w, short a, char g)
 
 void PlatyPus::eat()
 {
+    srand(time(NULL));  // set up the seed
+
+    //  variables
+    float percentage,
+          weightAdded;
     
+    percentage = ((rand() % 50) + 1) / 1000;
+    weightAdded = weight * percentage;
+    
+    weight += weightAdded;
 }
+
 void Platypus::hatch()
 {
     
