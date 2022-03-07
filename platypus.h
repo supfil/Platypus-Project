@@ -121,6 +121,7 @@ private:
     bool alive;
     bool mutant;
 public:
+    //  constructors
     Platypus();
     Platypus(string, float, short, char);
     ~Platypus() {}
