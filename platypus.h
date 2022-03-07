@@ -91,13 +91,13 @@
  void hatch();
     Precondition:   a Platypus instance exists
     Postcondition:  it will set age to 0, alive to true and mutant to
-                    false.
-                    gender randomly selected from 'F' to 'M'(50/50
-                    chance), weight will randomly be selected from
-                    0.1 to 1 pound, finally names will be determined
-                    from its gender, two files containing names for
-                    female and male Platypus (name will be randomlly
-                    selected from the file that its gender is)
+                    false. gender randomly selected from
+                    'F' to 'M'(50/50 chance), weight will randomly
+                    be selected from 0.1 to 1 pound, finally names
+                    will be determined from its gender, two files
+                    containing names for female and male
+                    Platypus (name will be randomlly selected from
+                    the file that its gender is)
  
  //////////////////////////////////////////////////////////////
  */
