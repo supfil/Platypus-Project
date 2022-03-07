@@ -2,7 +2,9 @@
 
 ## Team: Filipp, William
 
-### Summary:  In this project, we attempt to make a platypus simulation, by making a Platypus class.
+### Summary:  
+    In this project, we attempt to make a platypus simulation, by making a Platypus class.
+    
 ##  Data Dictionary: Variables (with data types)
     static const float MAX_WEIGHT = 10.0; 
     float weight;
@@ -53,6 +55,15 @@
 ## Data Dictionary: Functions (platypusDriver.cpp)
     Nothing
     
-## Responsibility
+## Responsibilities
 ### Filipp: 
+    In charge of 2 functions. 
+    
+        -void eat() function.
+        -void hatch() function.
 ### William:  
+    In charge of 3 functions. 
+    
+        -void ageMe() function.
+        -void fight(Platypus) function.
+        -void print() function.
