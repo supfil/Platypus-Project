@@ -77,7 +77,7 @@
     Postcondition:  the calling Platypus attacks the Platypus that is
                     passed in. the victor is decided by a fight ratio
                     which is decided by
-                    (calling_platypus_weight/other_platypus_weight)*50
+                    (callingPlatypus.weight/otherPlatypus.weight)*50
                     and a random number will be generated, from 1 to
                     100, if the random number is higher than the fight
                     ratio, then the calling Platypus dies/loses,
