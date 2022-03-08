@@ -105,15 +105,12 @@
     Postcondition:  it takes in char parameter values to decide which
                     gender name it will choose from the male names or
                     female names files.
- float randomNum(float, float);
+ float randomNum(int, float);
     Precondition:   a Platypus instance exists
-    Postcondition:  it generates a random number using the two
-                    floats, first is the modula and second is how
+    Postcondition:  it generates a random number using one int and
+                    one float, first is the modula and second is how
                     much is it divided by.
- char setRandomGender();
-    Precondition:   a Platypus instance exists
-    Postcondition:  it uses the randomNum() to decided wether it is
-                    a boy or girl.
+ 
  //////////////////////////////////////////////////////////////
  */
  
@@ -121,14 +118,12 @@
 #define PLATYPUS_H
 
 #include <string>
-#include <stdlib>//srand (time(NULL));
-#include <ctime>
 using namespace std;
 
 class Platypus
 {
 private:
-    static const float MAX_WEIGHT = 10.0;
+    static const int MAX_WEIGHT = 10;
     float weight;
     short age;
     string name;
@@ -137,8 +132,7 @@ private:
     bool mutant;
     
     string setRandomName(char);
-    float randomNum(float, float);
-    char setRandomGender();
+    float randomNum(int, float);
 public:
     //  constructors
     Platypus();
@@ -154,12 +148,12 @@ public:
     void setMutant(bool m) { mutant = m; }
     
     //  accessors
-    void getWeight() { return weight; }
-    void getAge() { return age; }
-    void getName() { return name; }
-    void getGender() { return gender; }
-    void getAlive() { return alive; }
-    void getMutant() { return mutant; }
+    float getWeight() { return weight; }
+    short getAge() { return age; }
+    string getName() { return name; }
+    char getGender() { return gender; }
+    bool getAlive() { return alive; }
+    bool getMutant() { return mutant; }
     
     // helper functions
     void print();

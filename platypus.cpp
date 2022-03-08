@@ -7,7 +7,9 @@
 
 #include <iostream>
 #include <fstream>
-#include <cstdlib>  // exit()
+#include <cstdlib>//srand (time(NULL)), exit(0);
+#include <ctime>
+#include "platypus.h"
 
 Platypus::Platypus()
 {
@@ -29,7 +31,7 @@ Platypus::Platypus(string n, float w, short a, char g)
     mutant = false;
 }
 
-void PlatyPus::eat()
+void Platypus::eat()
 {
     //  variables
     float percentage,
@@ -48,14 +50,22 @@ void Platypus::hatch()
     alive = true;
     mutant = false;
     
-    gender = setRandomGender();
+    //  this uses randomNum() to decide the gender
+    float random = randomNum(2,1);
+    if (random == 2)
+        gender = 'M';
+    else
+        gender = 'F';
     
     name = setRandomName(gender);
 }
 
 string Platypus::setRandomName(char g)
 {
-    string newName;
+    string newName,
+           temp;
+    int max = 0,
+        random;
     
     ifstream fin;
     
@@ -68,6 +78,14 @@ string Platypus::setRandomName(char g)
             cout << "Error opeining input file.\n";
             exit(0);
         }
+        
+        while (!fin.eof())
+        {
+            fin >> temp;
+            max++;
+        }
+        random = static_cast<int>(randomNum(max, 1));
+        
     }
     else
     {
@@ -80,24 +98,12 @@ string Platypus::setRandomName(char g)
         }
     }
     
+    fin.close();
     
     return newName;
 }
 
-char Platypus::setRandomGender()
-{
-    char newGender;
-    float random = randomNum(2,1);
-    
-    if (random == 2)
-        newGender = 'M';
-    else
-        newGender = 'F';
-    
-    return newGender;
-}
-
-float Platypus::randomNum(float modula, float divided)
+float Platypus::randomNum(int modula, float divided)
 {
     srand(time(NULL));  // set up the seed
     

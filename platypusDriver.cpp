@@ -6,12 +6,12 @@
 //
 
 #include <iostream>
-#include "platypus"
+#include "platypus.h"
 using namespace std;
 
 int main()
 {
-    
+    /*
     Platypus p1;
     Platypus p2("Champ", 5.0, 0, 'M');
     p1.print();
@@ -29,7 +29,7 @@ int main()
     p1.fight(p2);// one is dead
     p1.print();
     p2.print();
-    
+    */
     /*
     char repeat;
     while(true)
