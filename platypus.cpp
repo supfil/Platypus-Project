@@ -84,7 +84,15 @@ string Platypus::setRandomName(char g)
             fin >> temp;
             max++;
         }
+        
+        fin.clear();
+        fin.seekg(0, ios::beg);
+        
         random = static_cast<int>(randomNum(max, 1));
+        for(int i = 0; i <random; i++)
+        {
+            fin >> newName;
+        }
         
     }
     else
@@ -95,6 +103,21 @@ string Platypus::setRandomName(char g)
         {
             cout << "Error opeining input file.\n";
             exit(0);
+        }
+        
+        while (!fin.eof())
+        {
+            fin >> temp;
+            max++;
+        }
+        
+        fin.clear();
+        fin.seekg(0, ios::beg);
+        
+        random = static_cast<int>(randomNum(max, 1));
+        for(int i = 0; i <random; i++)
+        {
+            fin >> newName;
         }
     }
     
