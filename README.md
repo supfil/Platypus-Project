@@ -6,7 +6,7 @@
     In this project, we attempt to make a platypus simulation, by making a Platypus class.
     
 ##  Data Dictionary: Variables (with data types)
-    static const float MAX_WEIGHT = 10.0; 
+    static const int MAX_WEIGHT = 10; 
     float weight;
     short age;
     string name;
@@ -29,12 +29,12 @@
     void setMutant(bool m) { mutant = m; }
     
     //  accessors
-    void getWeight() { return weight; }
-    void getAge() { return age; }
-    void getName() { return name; }
-    void getGender() { return gender; }
-    void getAlive() { return alive; }
-    void getMutant() { return mutant; }
+    float getWeight() { return weight; }
+    short getAge() { return age; }
+    string getName() { return name; }
+    char getGender() { return gender; }
+    bool getAlive() { return alive; }
+    bool getMutant() { return mutant; }
     
     // helper functions
     void print();
@@ -44,7 +44,8 @@
     void hatch();  
     
     //  private functions
-    void setRandomName(char);
+    string setRandomName(char);
+    float randomNum(int, float);
     
 ## Data Dictionary: Functions (defined in the platypus.cpp file)
     Platypus(); 
@@ -62,11 +63,12 @@
     
 ## Responsibilities
 ### Filipp: 
-    In charge of 2 functions. 
+    In charge of 4 functions. 
     
         -void eat() function.
         -void hatch() function.
-        -void setRandomName(char) private function;
+        -string setRandomName(char) private function;
+        -float randomNum(int, float) private function;
 ### William:  
     In charge of 3 functions. 
     
