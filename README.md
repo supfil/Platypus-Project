@@ -1,6 +1,6 @@
 # Platypus-Project
 
-## Team: Filipp, William
+## Team: Filipp Suprun, William Ho
 
 ### Summary:  
     In this project, we attempt to make a platypus simulation, by making a Platypus class.
