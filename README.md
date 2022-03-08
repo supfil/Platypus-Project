@@ -43,6 +43,9 @@
     void eat();
     void hatch();  
     
+    //  private functions
+    void setRandomName(char);
+    
 ## Data Dictionary: Functions (defined in the platypus.cpp file)
     Platypus(); 
     Platypus(string, float, short, char);
@@ -52,6 +55,8 @@
     void fight(Platypus);
     void eat();
     void hatch();  
+    
+    void setRandomName(char);
 ## Data Dictionary: Functions (platypusDriver.cpp)
     Nothing
     
@@ -61,6 +66,7 @@
     
         -void eat() function.
         -void hatch() function.
+        -void setRandomName(char) private function;
 ### William:  
     In charge of 3 functions. 
     
