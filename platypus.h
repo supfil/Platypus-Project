@@ -120,6 +120,7 @@ private:
     char gender;
     bool alive;
     bool mutant;
+    void setRandomName(char);
 public:
     //  constructors
     Platypus();

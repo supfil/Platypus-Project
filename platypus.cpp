@@ -43,5 +43,13 @@ void PlatyPus::eat()
 
 void Platypus::hatch()
 {
+    //  set the variables for a newborn platypus
+    age = 0;
+    alive = true;
+    mutant = false;
+}
+
+void setRandomName(char g)
+{
     
 }
