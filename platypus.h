@@ -99,6 +99,21 @@
                     Platypus (name will be randomlly selected from
                     the file that its gender is)
  
+ // private helper function
+ string setRandomName(char);
+    Precondition:   a Platypus instance exists
+    Postcondition:  it takes in char parameter values to decide which
+                    gender name it will choose from the male names or
+                    female names files.
+ float randomNum(float, float);
+    Precondition:   a Platypus instance exists
+    Postcondition:  it generates a random number using the two
+                    floats, first is the modula and second is how
+                    much is it divided by.
+ char setRandomGender();
+    Precondition:   a Platypus instance exists
+    Postcondition:  it uses the randomNum() to decided wether it is
+                    a boy or girl.
  //////////////////////////////////////////////////////////////
  */
  
@@ -120,7 +135,10 @@ private:
     char gender;
     bool alive;
     bool mutant;
-    void setRandomName(char);
+    
+    string setRandomName(char);
+    float randomNum(float, float);
+    char setRandomGender();
 public:
     //  constructors
     Platypus();
