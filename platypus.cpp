@@ -19,6 +19,8 @@ Platypus::Platypus()
     weight = MAX_WEIGHT;
     alive = false;
     mutant = false;
+    
+    srand(time(NULL));  // set up the seed
 }
 
 Platypus::Platypus(string n, float w, short a, char g)
@@ -29,6 +31,8 @@ Platypus::Platypus(string n, float w, short a, char g)
     weight = w;
     alive = true;
     mutant = false;
+    
+    srand(time(NULL));  // set up the seed
 }
 
 //  this function adds a random ammount of weight to the Platypus
@@ -136,7 +140,6 @@ string Platypus::setRandomName(char g)
 //  this is a helper function that makes a random number
 float Platypus::randomNum(int modula, float divided)
 {
-    srand(time(NULL));  // set up the seed
     
     return ((rand() % modula) + 1) / divided;
 }
