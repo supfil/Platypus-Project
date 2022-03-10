@@ -57,7 +57,8 @@
     void eat();
     void hatch();  
     
-    void setRandomName(char);
+    string setRandomName(char);
+    float randomNum(int, float);
 ## Data Dictionary: Functions (platypusDriver.cpp)
     Nothing
     
