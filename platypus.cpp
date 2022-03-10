@@ -25,8 +25,8 @@ Platypus::Platypus()
 
 Platypus::Platypus(string n, float w, short a, char g)
 {
-    age =a;
     name = n;
+    age =a;
     gender = g;
     weight = w;
     alive = true;
@@ -38,14 +38,25 @@ Platypus::Platypus(string n, float w, short a, char g)
 //  this function adds a random ammount of weight to the Platypus
 void Platypus::eat()
 {
-    //  variables
-    float percentage,
-          weightAdded;
-    
-    percentage = randomNum(50, 1000);
-    weightAdded = weight * percentage;
-    
-    weight += weightAdded;
+    //  checks to see if the platypus is dead, if yes, stops
+    try
+    {
+        if (alive == false)
+            throw "\nYou can not feed a dead platypus!\n";
+        
+        //  variables
+        float percentage,
+              weightAdded;
+        
+        percentage = randomNum(50, 1000);
+        weightAdded = weight * percentage;
+        
+        weight += weightAdded;
+    }
+    catch (const char* message)
+    {
+        cerr << message << endl;
+    }
 }
 
 //  this function restarts a Platypus, random name, random weight,
@@ -81,7 +92,7 @@ string Platypus::setRandomName(char g)
     
     ifstream fin;
     
-    if(g == 'F')
+    if (g == 'F')
     {
         fin.open("f_names.txt");
         
