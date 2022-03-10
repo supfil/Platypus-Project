@@ -57,7 +57,11 @@ void Platypus::hatch()
     else
         gender = 'F';
     
+    //  name
     name = setRandomName(gender);
+    
+    //  weight
+    weight = randomNum(10, 10);
 }
 
 string Platypus::setRandomName(char g)
@@ -89,11 +93,10 @@ string Platypus::setRandomName(char g)
         fin.seekg(0, ios::beg);
         
         random = static_cast<int>(randomNum(max, 1));
-        for(int i = 0; i <random; i++)
+        for(int i = 0; i < random; i++)
         {
             fin >> newName;
         }
-        
     }
     else
     {
