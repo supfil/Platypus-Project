@@ -31,6 +31,7 @@ Platypus::Platypus(string n, float w, short a, char g)
     mutant = false;
 }
 
+//  this function adds a random ammount of weight to the Platypus
 void Platypus::eat()
 {
     //  variables
@@ -43,6 +44,8 @@ void Platypus::eat()
     weight += weightAdded;
 }
 
+//  this function restarts a Platypus, random name, random weight,
+//  random gender
 void Platypus::hatch()
 {
     //  set the variables for a newborn platypus
@@ -64,6 +67,7 @@ void Platypus::hatch()
     weight = randomNum(10, 10);
 }
 
+//  this is the random name generator, uses randomNum()
 string Platypus::setRandomName(char g)
 {
     string newName,
@@ -118,7 +122,7 @@ string Platypus::setRandomName(char g)
         fin.seekg(0, ios::beg);
         
         random = static_cast<int>(randomNum(max, 1));
-        for(int i = 0; i <random; i++)
+        for(int i = 0; i < random; i++)
         {
             fin >> newName;
         }
@@ -129,6 +133,7 @@ string Platypus::setRandomName(char g)
     return newName;
 }
 
+//  this is a helper function that makes a random number
 float Platypus::randomNum(int modula, float divided)
 {
     srand(time(NULL));  // set up the seed
