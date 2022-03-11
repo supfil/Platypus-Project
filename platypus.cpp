@@ -200,3 +200,19 @@ void Platypus::print()
 
     return;
 }
+
+void Platypus::ageMe()
+{
+    age++;
+
+    // create chance of mutation
+    if ((rand() % 100) < 2) 
+        mutant = true;
+    
+    // create chance of death
+    float chanceOfDeath = 10 * weight;
+    float randNum = (float) rand() / (float) (RAND_MAX/100); // random float [0, 100]
+    if (randNum < chanceOfDeath)
+        alive = false;
+    return;
+}
