@@ -15,8 +15,8 @@ Platypus::Platypus()
 {
     age = 0;
     name = "";
-    gender = 'M';
-    weight = MAX_WEIGHT;
+    gender = '\0';
+    weight = 0;
     alive = false;
     mutant = false;
     
