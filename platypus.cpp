@@ -183,3 +183,20 @@ float Platypus::randomNum(int modula, float divided)
 {
     return ((rand() % modula) + 1) / divided;
 }
+
+void Platypus::print()
+{
+    string status,
+           mutantMsg;
+    alive ? status = "Alive" : status = "Dead";
+    mutant ? mutantMsg = "True" : mutantMsg = "False";
+
+    cout << "Name: " << name << endl;
+    cout << "Status: " << status << endl;
+    cout << "Mutant?: " <<  mutantMsg << endl;
+    cout << "Age: " << age << endl;
+    cout << "Weight: " << weight << endl;
+    cout << "Gender: " << gender << endl;
+
+    return;
+}
