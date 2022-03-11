@@ -197,6 +197,7 @@ void Platypus::print()
     cout << "Age: " << age << endl;
     cout << "Weight: " << weight << endl;
     cout << "Gender: " << gender << endl;
+    cout << endl;
 
     return;
 }
