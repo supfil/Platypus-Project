@@ -25,14 +25,33 @@ Platypus::Platypus()
 
 Platypus::Platypus(string n, float w, short a, char g)
 {
-    name = n;
-    age =a;
-    gender = g;
-    weight = w;
-    alive = true;
-    mutant = false;
-    
-    srand(time(NULL));  // set up the seed
+    //  use a try to make sure the parameters are good
+    try
+    {
+        if (a < 0)
+            throw "\nYou need a valid age!\n";
+        else if (n == "")
+            throw "\nYou need a name!";
+        else if (w <= 0)
+            throw "\nThe platypus needs a real weight";
+        else if (g != 'M')
+            if (g != 'F')
+                throw "\nIt needs a gender ('F' or 'M')\n";
+        
+        name = n;
+        age = a;
+        gender = g;
+        weight = w;
+        
+        alive = true;
+        mutant = false;
+        
+        srand(time(NULL));  // set up the seed
+    }
+    catch (const char* message)
+    {
+        cerr << message << endl;
+    }
 }
 
 //  this function adds a random ammount of weight to the Platypus
@@ -63,23 +82,34 @@ void Platypus::eat()
 //  random gender
 void Platypus::hatch()
 {
-    //  set the variables for a newborn platypus
-    age = 0;
-    alive = true;
-    mutant = false;
-    
-    //  this uses randomNum() to decide the gender
-    float random = randomNum(2,1);
-    if (random == 2)
-        gender = 'M';
-    else
-        gender = 'F';
-    
-    //  name
-    name = setRandomName(gender);
-    
-    //  weight
-    weight = randomNum(10, 10);
+    //  use a try to determine if the platypus is dead first
+    try
+    {
+        if (alive == true)
+            throw "\nYou need a dead platypus to do a hatch()\n";
+        
+        //  set the variables for a newborn platypus
+        age = 0;
+        alive = true;
+        mutant = false;
+        
+        //  this uses randomNum() to decide the gender
+        float random = randomNum(2,1);
+        if (random == 2)
+            gender = 'M';
+        else
+            gender = 'F';
+        
+        //  name
+        name = setRandomName(gender);
+        
+        //  weight
+        weight = randomNum(10, 10);
+    }
+    catch (const char* message)
+    {
+        cerr << message << endl;
+    }
 }
 
 //  this is the random name generator, uses randomNum()
@@ -151,6 +181,5 @@ string Platypus::setRandomName(char g)
 //  this is a helper function that makes a random number
 float Platypus::randomNum(int modula, float divided)
 {
-    
     return ((rand() % modula) + 1) / divided;
 }
