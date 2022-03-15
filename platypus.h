@@ -123,7 +123,6 @@ using namespace std;
 class Platypus
 {
 private:
-    static const int MAX_WEIGHT = 10;
     float weight;
     short age;
     string name;
