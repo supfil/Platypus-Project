@@ -5,8 +5,7 @@
 ### Summary:  
     In this project, we attempt to make a platypus simulation, by making a Platypus class.
     
-##  Data Dictionary: Variables (with data types)
-    static const int MAX_WEIGHT = 10; 
+##  Data Dictionary: Variables (with data types) 
     float weight;
     short age;
     string name;
