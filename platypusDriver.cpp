@@ -12,14 +12,13 @@ using namespace std;
 
 Platypus intro();   //this will ask the user for info about thier platypus
 char menu(); // it will allow the user to pick options for what to do
-void eatingFood(Platypus);//makes the users Platypus use the eat()
-void grow(Platypus);// this makes the user's platypus grow
-void platypusFight(Platypus);// this makes the user's platypus fight
+void eatingFood(Platypus&);//makes the users Platypus use the eat()
+void grow(Platypus&);// this makes the user's platypus grow
+void platypusFight(Platypus&);// this makes the user's platypus fight
 void quit(char); //  this makes the program stop
 
 int main()
 {
-    /*
     Platypus p1;
     Platypus p2("Champ", 5.0, 0, 'M');
 
@@ -103,7 +102,7 @@ char menu() // it will allow the user to pick options for what to do
     return choice;
 }
 
-void eatingFood(Platypus myPlatypus)// makes the users Platypus use the eat()
+void eatingFood(Platypus& myPlatypus)// makes the users Platypus use the eat()
 {
     int numMeals = rand() % 4;
     if (numMeals == 0) 
@@ -123,12 +122,12 @@ void eatingFood(Platypus myPlatypus)// makes the users Platypus use the eat()
 
 }
 
-void grow(Platypus myPlatypus)// this makes the user's platypus grow
+void grow(Platypus& myPlatypus)// this makes the user's platypus grow
 {
     
 }
 
-void platypusFight(Platypus myPlatypus)// this makes the user's platypus fight a random platypus
+void platypusFight(Platypus& myPlatypus)// this makes the user's platypus fight a random platypus
 {
     Platypus randomPlatypus;
     randomPlatypus.hatch();

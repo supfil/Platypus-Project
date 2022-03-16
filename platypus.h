@@ -157,7 +157,7 @@ public:
     // helper functions
     void print();
     void ageMe();
-    void fight(Platypus);
+    void fight(Platypus&);
     void eat();
     void hatch();
 };
