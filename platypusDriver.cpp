@@ -79,7 +79,7 @@ int main()
         if (!p1.getAlive()) 
         {
             cout << "Sorry. Your platypus has died." << endl;
-            return;
+            break;
         }
         
         if (repeat == 'y'||repeat == 'Y')
