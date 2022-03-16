@@ -76,6 +76,11 @@ int main()
                 cout << "\nSorry that isn't an option, try again\n";
                 break;
         }
+        if (!p1.getAlive()) 
+        {
+            cout << "Sorry. Your platypus has died." << endl;
+            return;
+        }
         
         if (repeat == 'y'||repeat == 'Y')
             break;
@@ -108,12 +113,16 @@ void grow(Platypus myPlatypus)// this makes the user's platypus grow
     
 }
 
-void platypusFight(Platypus myPlatypus)// this makes the user's platypus fight
+void platypusFight(Platypus myPlatypus)// this makes the user's platypus fight a random platypus
 {
-    
+
 }
 
 void quit(char answer) //  this makes the program stop
 {
-    if (answer == 'n' || answer == 'N') exit(0);
+    if (answer == 'n' || answer == 'N') 
+    {
+        cout << "You've quit the program." << endl;
+        exit(0);
+    }
 }
