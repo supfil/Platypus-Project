@@ -108,13 +108,22 @@ Platypus intro()//this will ask the user for info about thier platypus
     char genda;
     
     cout << "\nHello to the platypus simulator!\n\n";
-    cout << "to begin, lets make your platypus!\n"
-         << "What is the platypus' name?:\t";
-    cin >> temp;
-    p1.setName(temp);
-    cout << "What gender is it?(has to be 'M' or 'F'):\t";
-    cin >> genda;
-    p1.setGender(genda);
+    while(true)
+    {
+        cout << "to begin, lets make your platypus!\n"
+             << "What is the platypus' name?:\t";
+        cin >> temp;
+        p1.setName(temp);
+        cout << "What gender is it?(has to be 'M' or 'F'):\t";
+        cin >> genda;
+        p1.setGender(genda);
+        
+        if (genda != 'M' && genda != 'F')
+            cout << "\nsorry you but please input correct input, try again.\n";
+        else
+            break;
+        
+    }
     
     cout << "\nOk here is your platypus!\n";
     p1.print();
