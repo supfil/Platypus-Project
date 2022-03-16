@@ -39,11 +39,22 @@ int main()
     p1.print(); // expected new age: 1
     
     cout << "************* TESTING FIGHT() *************" << endl;
-    p1.fight(p2);// one is dead
-    p1.print();
-    p2.print();
-    */
-
+    int bothAliveCounter = 0;
+    int p1Wins = 0;
+    int p2Wins = 0;
+    for (int i = 0; i < 100; i++)
+    {
+        p1.setAlive(true);
+        p2.setAlive(true);
+        p1.fight(p2);
+        if (p1.getAlive() && p2.getAlive()) 
+            bothAliveCounter++;
+        else if (p1.getAlive() && !p2.getAlive()) p1Wins++;
+        else if (!p1.getAlive() && p2.getAlive()) p2Wins++;
+    }
+    cout << "Number of times both are alive: " << bothAliveCounter << endl;
+    cout << "Number of p1 wins: " << p1Wins << endl;
+    cout << "Number of p2 wins: " << p2Wins << endl;
     
     char repeat,
          decision;
@@ -84,7 +95,6 @@ int main()
         if (repeat == 'y'||repeat == 'Y')
             break;
     }
-    
     
     return 0;
 }
