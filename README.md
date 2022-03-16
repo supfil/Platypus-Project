@@ -59,7 +59,12 @@
     string setRandomName(char);
     float randomNum(int, float);
 ## Data Dictionary: Functions (platypusDriver.cpp)
-    Nothing
+    Platypus intro();  
+    char menu(); 
+    void eatingFood(Platypus&);
+    void grow(Platypus&);
+    void platypusFight(Platypus&);
+    void quit(char);
     
 ## Responsibilities
 ### Filipp: 
