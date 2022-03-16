@@ -195,7 +195,7 @@ void Platypus::print()
     cout << "Status: " << status << endl;
     cout << "Mutant?: " <<  mutantMsg << endl;
     cout << "Age: " << age << endl;
-    cout << "Weight: " << weight << endl;
+    cout << "Weight: " << weight << " pounds" << endl;
     cout << "Gender: " << gender << endl;
     cout << endl;
 
