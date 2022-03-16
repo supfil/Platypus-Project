@@ -115,7 +115,18 @@ void grow(Platypus myPlatypus)// this makes the user's platypus grow
 
 void platypusFight(Platypus myPlatypus)// this makes the user's platypus fight a random platypus
 {
-
+    Platypus randomPlatypus;
+    randomPlatypus.hatch();
+    myPlatypus.fight(randomPlatypus); 
+    if (myPlatypus.getAlive())
+    {
+        cout << "Your platypus has won a battle against a wild platypus with " 
+             << "the following stats: " << endl
+             << "Weight: " << randomPlatypus.getWeight() << endl
+             << "Age: " << randomPlatypus.getAge() << endl
+             << "Gender: " << randomPlatypus.getGender() << endl;
+    } 
+    return;
 }
 
 void quit(char answer) //  this makes the program stop
