@@ -123,7 +123,8 @@ char menu() // it will allow the user to pick options for what to do
     cout << "\nAlright you have an option of what you can do with "
          << "your platypus." << endl;
     cout << "Enter 'e' to make your platypus eat" << endl
-         << "Enter 'g' to make your platypus grow" << endl
+         << "Enter 'g' to make your platypus grow(it may dies of old"
+         << " age or get mutated)" << endl
          << "Enter 'f' to make your platypus fight a wild platypus"
          << " (be aware it may die!)" << endl
          << "Enter 'q' to quit the program" << endl;
