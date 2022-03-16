@@ -101,7 +101,20 @@ int main()
 
 Platypus intro()//this will ask the user for info about thier platypus
 {
+    Platypus p1;
+    p1.hatch;
     
+    cout << "\nHello to the platypus simulator!\n\n";
+    cout << "to begin, lets make your platypus!\n"
+         << "What is the platypus' name?:\t";
+    cin >> p1.setName();
+    cout << "What gender is it?(has to be 'M' or 'F'):\t";
+    cin >> p1.setGender();
+    
+    cout << "\nOk here is your platypus!\n";
+    p1.print();
+    
+    return p1;
 }
 
 char menu() // it will allow the user to pick options for what to do
