@@ -63,15 +63,28 @@
     
 ## Responsibilities
 ### Filipp: 
-    In charge of 4 functions. 
+    In charge of 4 class functions:
     
         -void eat() function.
         -void hatch() function.
         -string setRandomName(char) private function;
         -float randomNum(int, float) private function;
+        
+    And 3 main() functions:
+    
+        -Platypus intro()
+        -char menu()
+        -void grow(Platypus& myPlatypus)
 ### William:  
-    In charge of 3 functions. 
+    In charge of 3 class functions. 
     
         -void ageMe() function.
-        -void fight(Platypus) function.
+        -void fight(Platypus&) function.
         -void print() function.
+        
+    And 3 main() functions:
+    
+        -void eatingFood(Platypus& myPlatypus)
+        -void platypusFight(Platypus& myPlatypus)
+        -void quit(char answer) 
+    
