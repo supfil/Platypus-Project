@@ -156,7 +156,11 @@ void eatingFood(Platypus& myPlatypus)// makes the users Platypus use the eat()
 
 void grow(Platypus& myPlatypus)// this makes the user's platypus grow
 {
+    myPlatypus.grow();
     
+    myPlatypus.print();
+    
+    return;
 }
 
 void platypusFight(Platypus& myPlatypus)// this makes the user's platypus fight a random platypus
