@@ -218,12 +218,13 @@ void Platypus::ageMe()
     return;
 }
 
-void Platypus::fight(Platypus p2)
+void Platypus::fight(Platypus& opponentPlatypus)
 {
-    float fightRatio = (weight / p2.weight) * 50;
-    if ((rand() % 100 + 1) < fightRatio)
-        p2.alive = false; 
-    else 
+    float fightRatio = (weight / opponentPlatypus.weight) * 50;
+    float randNum = (float) rand() / (float) (RAND_MAX/100);
+    if (randNum < fightRatio)
+        opponentPlatypus.alive = false;
+    else
         alive = false;
     return;
 }
