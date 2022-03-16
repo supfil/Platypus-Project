@@ -70,7 +70,7 @@
         -string setRandomName(char) private function;
         -float randomNum(int, float) private function;
         
-    And 3 main() functions:
+    And 3 driver functions:
     
         -Platypus intro()
         -char menu()
@@ -82,7 +82,7 @@
         -void fight(Platypus&) function.
         -void print() function.
         
-    And 3 main() functions:
+    And 3 driver functions:
     
         -void eatingFood(Platypus& myPlatypus)
         -void platypusFight(Platypus& myPlatypus)
