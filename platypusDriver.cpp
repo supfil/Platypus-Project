@@ -7,14 +7,15 @@
 
 #include <iostream>
 #include "platypus.h"
+#include <cstdlib> // exit()
 using namespace std;
 
 Platypus intro();   //this will ask the user for info about thier platypus
 char menu(); // it will allow the user to pick options for what to do
-void eatingFood(Platypus$);//makes the users Platypus use the eat()
-void grow(Platypus$);// this makes the user's platypus grow
-void platypusFight(Platypus$);// this makes the user's platypus fight
-void quit(char&); //  this makes the program stop
+void eatingFood(Platypus);//makes the users Platypus use the eat()
+void grow(Platypus);// this makes the user's platypus grow
+void platypusFight(Platypus);// this makes the user's platypus fight
+void quit(char); //  this makes the program stop
 
 int main()
 {
@@ -97,22 +98,22 @@ char menu() // it will allow the user to pick options for what to do
     return choice;
 }
 
-void eatingFood(Platypus$)//makes the users Platypus use the eat()
+void eatingFood(Platypus myPlatypus)//makes the users Platypus use the eat()
 {
     
 }
 
-void grow(Platypus$)// this makes the user's platypus grow
+void grow(Platypus myPlatypus)// this makes the user's platypus grow
 {
     
 }
 
-void platypusFight(Platypus$)// this makes the user's platypus fight
+void platypusFight(Platypus myPlatypus)// this makes the user's platypus fight
 {
     
 }
 
-void quit(char&) //  this makes the program stop
+void quit(char answer) //  this makes the program stop
 {
-    
+    if (answer == 'n' || answer == 'no') exit(0);
 }
