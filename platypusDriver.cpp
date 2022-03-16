@@ -102,14 +102,19 @@ int main()
 Platypus intro()//this will ask the user for info about thier platypus
 {
     Platypus p1;
-    p1.hatch;
+    p1.hatch();
+    
+    string temp;
+    char genda;
     
     cout << "\nHello to the platypus simulator!\n\n";
     cout << "to begin, lets make your platypus!\n"
          << "What is the platypus' name?:\t";
-    cin >> p1.setName();
+    cin >> temp;
+    p1.setName(temp);
     cout << "What gender is it?(has to be 'M' or 'F'):\t";
-    cin >> p1.setGender();
+    cin >> genda;
+    p1.setGender(genda);
     
     cout << "\nOk here is your platypus!\n";
     p1.print();
@@ -156,7 +161,7 @@ void eatingFood(Platypus& myPlatypus)// makes the users Platypus use the eat()
 
 void grow(Platypus& myPlatypus)// this makes the user's platypus grow
 {
-    myPlatypus.grow();
+    myPlatypus.ageMe();
     
     myPlatypus.print();
     
