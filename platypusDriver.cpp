@@ -163,6 +163,9 @@ void grow(Platypus& myPlatypus)// this makes the user's platypus grow
 {
     myPlatypus.ageMe();
     
+    cout << "Your platypus grew by 1 month!, see if they died or"
+         << " got mutated" << endl;
+    
     myPlatypus.print();
     
     return;
