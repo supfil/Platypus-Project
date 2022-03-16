@@ -19,6 +19,7 @@ void quit(char); //  this makes the program stop
 
 int main()
 {
+    /*
     Platypus p1;
     Platypus p2("Champ", 5.0, 0, 'M');
 
@@ -55,7 +56,7 @@ int main()
     cout << "Number of times both are alive: " << bothAliveCounter << endl;
     cout << "Number of p1 wins: " << p1Wins << endl;
     cout << "Number of p2 wins: " << p2Wins << endl;
-    
+    */
     char repeat,
          decision;
     
