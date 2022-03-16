@@ -57,8 +57,7 @@ int main()
     cout << "Number of p1 wins: " << p1Wins << endl;
     cout << "Number of p2 wins: " << p2Wins << endl;
     */
-    char repeat,
-         decision;
+    char decision;
     
     //  create a platypus from user input along with the intro
     Platypus p1;
@@ -70,7 +69,8 @@ int main()
         decision = menu();
         
         //  the menu decides what to do
-        switch (decision) {
+        switch (decision)
+        {
             case 'e':
                 eatingFood(p1);
                 break;
@@ -81,20 +81,19 @@ int main()
                 platypusFight(p1);
                 break;
             case 'q':
-                quit(repeat);
+                quit('n');
                 break;
             default:
                 cout << "\nSorry that isn't an option, try again\n";
                 break;
         }
+        
         if (!p1.getAlive()) 
         {
             cout << "Sorry. Your platypus has died." << endl;
             break;
         }
         
-        if (repeat == 'y'||repeat == 'Y')
-            break;
     }
     
     return 0;
@@ -121,8 +120,16 @@ Platypus intro()//this will ask the user for info about thier platypus
 char menu() // it will allow the user to pick options for what to do
 {
     char choice;
-    cout << "";
+    cout << "\nAlright you have an option of what you can do with "
+         << "your platypus." << endl;
+    cout << "Enter 'e' to make your platypus eat" << endl
+         << "Enter 'g' to make your platypus grow" << endl
+         << "Enter 'f' to make your platypus fight a wild platypus"
+         << " (be aware it may die!)" << endl
+         << "Enter 'q' to quit the program" << endl;
+    
     cin >> choice;
+    
     return choice;
 }
 
