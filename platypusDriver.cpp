@@ -115,5 +115,5 @@ void platypusFight(Platypus myPlatypus)// this makes the user's platypus fight
 
 void quit(char answer) //  this makes the program stop
 {
-    if (answer == 'n' || answer == 'no') exit(0);
+    if (answer == 'n' || answer == 'N') exit(0);
 }
