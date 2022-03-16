@@ -103,9 +103,24 @@ char menu() // it will allow the user to pick options for what to do
     return choice;
 }
 
-void eatingFood(Platypus myPlatypus)//makes the users Platypus use the eat()
+void eatingFood(Platypus myPlatypus)// makes the users Platypus use the eat()
 {
-    
+    int numMeals = rand() % 4;
+    if (numMeals == 0) 
+    {
+        cout << "Your platypus couldn't find any food today. Perhaps they'll find "
+             << "better luck tomorrow!" << endl;
+        return;
+    }
+    else 
+    {
+        for (int i = 0; i < numMeals; i++)
+            myPlatypus.eat();
+        cout << "Your platypus found " << numMeals << "meals today!" << endl
+             << "Its new weight is: " << myPlatypus.getWeight() << " pounds." << endl;
+    }
+    return;
+
 }
 
 void grow(Platypus myPlatypus)// this makes the user's platypus grow
